@@ -24,3 +24,9 @@ In fact, make x = y and flip it over and it's exactly the series of square numbe
 const findSquares = (x, y) => y * (y + 1) * (y - (3 * x) - 1) / -6;
 
 // or
+
+function findSquares(x, y) {
+  let s = 0
+  while (x && y) s += x-- * y--
+  return s
+}
