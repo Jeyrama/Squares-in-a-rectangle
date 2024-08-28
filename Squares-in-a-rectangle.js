@@ -13,3 +13,12 @@ the dimensions of which being given as two integers with the first always being 
 
 
 // Solution
+
+/*
+(x-0) * (y-0) (x-1) * (y-1) (x-2) * (y-2) (x-3) * (y-3) ... (x-n) * (y-n)
+Where n is min(x, y).
+This series looks a lot like the series of square numbers 1, 4, 9, ..., n^2]. 
+In fact, make x = y and flip it over and it's exactly the series of square numbers up to (n-1)^2.
+*/
+
+const findSquares = (x, y) => y * (y + 1) * (y - (3 * x) - 1) / -6;
